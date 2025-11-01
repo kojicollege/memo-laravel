@@ -23,6 +23,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:5.0.0
+    platform: linux/amd64
     container_name: php_simple_memo_laravel_phpmyadmin
     environment:
       - PMA_ARBITRARY=1
@@ -36,6 +37,7 @@ services:
 
   db:
     image: mysql:5.7
+    platform: linux/amd64
     container_name: php_simple_memo_laravel_mysql
     ports:
       - 23306:3306
